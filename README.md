@@ -113,44 +113,54 @@ A simple visualization displays how many attacks were blocked and which categori
 
 ---
 
-# Ideas for a Production Demo
+## Ideas for a Production Demo
 
-If this were extended into a full product demonstration, additional capabilities could include:
+If this demo were extended into a more complete production or evaluation environment, several additional capabilities could be added.
 
 ### Expanded Attack Library
+The current demo uses a small set of predefined prompts to simulate attacks. A production-ready version could include a larger library of adversarial inputs covering different attack patterns such as:
 
-Include more advanced attack scenarios such as:
+- multi-step prompt injection chains  
+- indirect prompt injection through retrieved documents (RAG)  
+- prompt obfuscation techniques designed to bypass filters  
+- multi-step data exfiltration attempts  
 
-- Jailbreak chains
-- Indirect prompt injection via documents
-- Multi-step data exfiltration attacks
-- Prompt obfuscation techniques
+This would better reflect the types of attacks commonly observed in real-world LLM deployments.
 
-### Multi-Agent or Tool Attacks
+### Benchmark-Based Evaluation
+A more rigorous evaluation could rely on standardized benchmarks such as the **PINT (Prompt Injection Test) benchmark**, which is designed to measure the robustness of systems against prompt injection attacks. Running Lakera Guard against such benchmarks would allow the demo to generate structured evaluation metrics across many attack scenarios.
 
-Demonstrate attacks targeting:
+### Dataset-Driven Testing
+Instead of relying only on handcrafted prompts, the demo could integrate **larger public datasets available on platforms such as Hugging Face** that are commonly used for LLM safety evaluations. These datasets contain thousands of adversarial prompts, including jailbreak attempts, harmful instructions, and moderation-related inputs. Running batch evaluations against these datasets would enable repeatable and scalable security testing.
 
-- Retrieval-Augmented Generation (RAG)
-- external tool usage
-- API integrations
+### Security Metrics and Evaluation
+A production demo could also report additional evaluation metrics commonly used in LLM security testing, such as:
 
-### Real-Time Security Monitoring
+- **Detection Rate**: the percentage of malicious prompts correctly identified and blocked by Lakera Guard  
+- **False Positive Rate**: the percentage of benign prompts incorrectly flagged as malicious  
+- **Latency Impact**: the additional response time introduced by the security layer  
 
-Add a full monitoring dashboard including:
+Tracking these metrics would help quantify the effectiveness and operational impact of the security system.
 
-- attack timeline
-- threat heatmaps
-- latency analysis
-- per-detector analytics
+### Observability and Monitoring
+For real-world deployments, observability is critical. The demo could integrate monitoring tools such as Splunk or Grafana to provide operational visibility into the AI system. Example dashboards could include:
+
+- attack timelines  
+- threat distribution heatmaps  
+- detection rates over time  
+- security alerts triggered by malicious prompts  
+
+This would allow security teams to monitor LLM activity and detect adversarial behavior in real time.
 
 ### Enterprise Use Cases
+Finally, the demo could be extended to showcase protection across several real-world AI applications such as:
 
-Demonstrate protection for:
+- healthcare assistants  
+- financial advisory chatbots  
+- customer support AI agents  
+- internal enterprise copilots  
 
-- Healthcare assistants
-- Financial advisory chatbots
-- Customer support AI
-- Internal enterprise copilots
+These scenarios would illustrate how a dedicated security layer like Lakera Guard can help protect LLM-powered systems deployed in production environments.
 
 ### Model Comparison
 
