@@ -14,6 +14,8 @@ The notebook integrates:
 
 The goal is to demonstrate why **pre-LLM security filtering** is critical when deploying AI systems in production environments.
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snoueili1/lakera-guard-demo/blob/main/notebooks/lakera_guard_demo.ipynb)
+
 ---
 
 # How to Run the Demo
